@@ -1,6 +1,7 @@
-CyberHub-S2_app:
+services:
+  CyberHub-S2_app:
     image: prawee/strapi:latest
-    container_name: CyberHub-App
+    container_name: CyberHub-App2
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_HOST: ${DATABASE_HOST}
