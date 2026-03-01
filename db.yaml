@@ -1,4 +1,4 @@
-CyberHub-S2_app:
+CyberHub-S2_db:
     image: prawee/strapi:latest
     container_name: CyberHub-App
     environment:
