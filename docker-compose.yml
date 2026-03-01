@@ -1,4 +1,8 @@
 include:
-  - db.yaml
-  - admin.yaml
-  - app.yaml
+  - db.yaml:
+  - admin.yaml:
+    depends_on:
+      - db
+  - app.yaml:
+    depends_on:
+      - db
