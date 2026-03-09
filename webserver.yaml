@@ -1,0 +1,13 @@
+services:
+  CyberHub-S2_web:
+    image: caddy/caddy:latest
+    container_name: CyberHub-Web2
+    ports:
+      - "2015:2015"
+      - "2016:2016"
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - CyberHub-S2_app
