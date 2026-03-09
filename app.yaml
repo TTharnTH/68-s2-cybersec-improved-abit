@@ -11,3 +11,6 @@ services:
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
     ports:
       - ${APP_PORT}:1337
+    depends_on:
+      CyberHub-S2_db:
+        condition: service_healthy
