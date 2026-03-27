@@ -1,0 +1,25 @@
+# Global options block
+{
+	# Email address for ACME (Let's Encrypt) registration. Change this in production.
+	email admin@example.com
+}
+
+
+# The public domain or IP for Strapi API
+# e.g., api.yourdomain.com
+http://localhost:2015 {
+	# Proxy requests to the Strapi app container
+	# The container name is CyberHub-App2, and it listens on port 1337 internally
+	reverse_proxy CyberHub-App2:1337 {
+		# Optional: add headers or other tweaks if Strapi needs them
+	}
+}
+
+# (Optional) The public domain or IP for pgAdmin interface
+# e.g., admin.yourdomain.com
+# Use an explicit port or subdomain for the admin panel so it doesn't conflict
+http://localhost:2016 {
+	# Proxy requests to the pgAdmin container
+	# The container name is CyberHub-Admin2, and it listens on port 80 internally
+	reverse_proxy CyberHub-Admin2:80
+}
